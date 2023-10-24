@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply min-h-screen grid place-content-center px-6 bg-gradient-to-b from-stone-300 to-stone-50 leading-normal;
+}
+
+#drum-machine {
+  @apply rounded-lg shadow flex flex-col justify-center items-center overflow-hidden;
+}
+
+#display {
+  @apply w-full h-[88px] py-6 bg-gradient-to-b from-stone-100 to-stone-300 flex justify-center items-center text-stone-800 text-4xl font-medium font-['Poppins'];
+}
+
+.drum-pads {
+  @apply p-3 bg-gradient-to-b from-stone-300 to-stone-500 grid grid-cols-3 grid-rows-3 gap-3 items-center;
+}
+
+.drum-pad {
+  @apply select-none p-5 text-[36px] text-stone-800 text-center font-['Poppins'] font-bold
+    rounded-lg bg-gradient-to-b from-stone-100 to-stone-300
+    transition-transform duration-300 cursor-pointer;
+}
+
+.drum-pad.clicked {
+  @apply scale-90;
+}
